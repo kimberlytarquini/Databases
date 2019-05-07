@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".customerInfo">
+
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/example_logo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/average_cost"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:onClick="averageCostParts"
+            android:text="Two-Table"
+            app:layout_constraintStart_toStartOf="@+id/button4"
+            app:layout_constraintTop_toBottomOf="@+id/button4" />
+
+        <Button
+            android:id="@+id/logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onClickLogout"
+            android:text="@string/logout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/logo"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="showEmployees"
+            android:text="@string/button1"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/logo" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="111dp"
+            android:layout_height="wrap_content"
+            android:onClick="moveToCustomer"
+            android:text="@string/button2"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="@+id/button1"
+            app:layout_constraintTop_toBottomOf="@id/button1" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:onClick="showOrders"
+            android:text="@string/button3"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="@+id/button2"
+            app:layout_constraintTop_toBottomOf="@+id/button5" />
+
+        <Button
+            android:id="@+id/button7"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:onClick="showOrderDetails"
+            android:text="@string/button7"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="@+id/button3"
+            app:layout_constraintTop_toBottomOf="@+id/button3" />
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="97dp"
+            android:layout_height="wrap_content"
+            android:onClick="moveToCart"
+            android:text="@string/button4"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="@+id/button7"
+            app:layout_constraintTop_toBottomOf="@+id/button7" />
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="102dp"
+            android:layout_height="47dp"
+            android:onClick="showParts"
+            android:text="@string/button5"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="@id/button4"
+            app:layout_constraintTop_toBottomOf="@+id/button2" />
+
+        <!--<Button-->
+        <!--android:id="@+id/submitbutton"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginStart="8dp"-->
+        <!--android:layout_marginTop="8dp"-->
+        <!--android:layout_marginEnd="8dp"-->
+        <!--android:layout_marginBottom="8dp"-->
+        <!--android:text=""-->
+        <!--app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--app:layout_constraintEnd_toEndOf="parent"-->
+        <!--app:layout_constraintStart_toStartOf="parent"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/information" />-->
+
+        <LinearLayout
+            android:id="@+id/information"
+            android:layout_width="294dp"
+            android:layout_height="250dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
+            android:orientation="vertical"
+            app:layout_constraintStart_toEndOf="@id/button1"
+            app:layout_constraintTop_toTopOf="@id/button1">
+
+                <ListView
+                    android:id="@+id/firstLineup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="250dp">
+
+
+                </ListView>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/selfJoin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="8dp"
+            android:onClick="selfJoin"
+            android:text="SelfJoin"
+            app:layout_constraintStart_toStartOf="@+id/average_cost"
+            app:layout_constraintTop_toBottomOf="@+id/average_cost" />
+
+        <Button
+            android:id="@+id/LIKE"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="17dp"
+            android:layout_marginTop="13dp"
+            android:onClick="likeOP"
+            android:text="LIKEOP"
+            app:layout_constraintStart_toEndOf="@+id/button4"
+            app:layout_constraintTop_toBottomOf="@+id/information" />
+        <Button
+            android:id="@+id/aggregate1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="17dp"
+            android:layout_marginTop="13dp"
+            android:onClick="aggregate1"
+            android:text="AGG_GROUPBY"
+            app:layout_constraintStart_toEndOf="@+id/LIKE"
+            app:layout_constraintTop_toBottomOf="@+id/information" />
+        <Button
+            android:id="@+id/aggregate2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="17dp"
+            android:layout_marginTop="13dp"
+            android:onClick="aggregate2"
+            android:text="AGG1"
+            app:layout_constraintStart_toEndOf="@+id/LIKE"
+
+            app:layout_constraintTop_toBottomOf="@+id/button8" />
+
+
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="16dp"
+        android:onClick="threeTableJoin"
+        android:text="ThreeTableJoin"
+        app:layout_constraintStart_toEndOf="@+id/average_cost"
+        app:layout_constraintTop_toBottomOf="@+id/LIKE" />
+
+    <Button
+        android:id="@+id/button9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="19dp"
+        android:onClick="subQuery"
+        android:text="SubQuery"
+        app:layout_constraintStart_toEndOf="@+id/selfJoin"
+        app:layout_constraintTop_toBottomOf="@+id/button8" />
+
+
+
+</android.support.constraint.ConstraintLayout>
